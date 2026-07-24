@@ -22,7 +22,6 @@ import gal1 from "@/assets/gallery-1.jpg";
 import gal2 from "@/assets/gallery-2.jpg";
 import gal3 from "@/assets/gallery-3.jpg";
 import gal4 from "@/assets/gallery-4.jpg";
-import facesAsset from "@/assets/the-faces.png.asset.json";
 
 const OG_IMAGE =
   "https://id-preview--9b916484-49eb-4de2-88cb-f210e47d0f43.lovable.app/logo.png";
@@ -343,7 +342,7 @@ function Faces() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
               <img
-                src={facesAsset.url}
+                src={gal2}
                 alt="The Event Circuit members: Puneet, Avi, Tushank, and Gulshan"
                 width={1080}
                 height={1920}
