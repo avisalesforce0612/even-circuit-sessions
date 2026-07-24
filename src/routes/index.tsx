@@ -370,7 +370,7 @@ function Faces() {
                   className="absolute inset-0 opacity-30 mix-blend-screen"
                   style={{
                     backgroundImage:
-                      "linear-gradient(color-mix(in_oklab,_var(--primary)_35%,_transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in_oklab,_var(--primary)_35%,_transparent) 1px, transparent 1px)",
+                     "linear-gradient(color-mix(in oklab, var(--primary) 35%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in oklab, var(--primary) 35%, transparent) 1px, transparent 1px)",
                     backgroundSize: "36px 36px",
                   }}
                 />
