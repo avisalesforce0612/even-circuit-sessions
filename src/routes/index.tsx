@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
         name: "description",
         content:
           "A small, warm music collective jamming every Saturday in Gurugram. Great People, Greater Vibes. One roof, zero pressure. Come play, sing, or just listen."
-      }
+      },
       { property: "og:title", content: "The Event Circuit — Saturday Jams in Gurugram" },
       {
         property: "og:description",
