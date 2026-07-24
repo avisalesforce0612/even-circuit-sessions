@@ -360,7 +360,7 @@ function Faces() {
               >
                 {/* scanline */}
                 <div
-                  className={`absolute inset-x-0 h-[2px] bg-primary/70 shadow-[0_0_18px_2px_color-mix(in oklab, var(--primary) 90%, transparent)] ${
+                  className={`absolute inset-x-0 h-[2px] bg-primary/70 shadow-[0_0_18px_2px_color-mix(in_oklab,_var(--primary)_90%,_transparent)] ${
                     reveal ? "animate-[scan_2.2s_ease-in-out_infinite]" : ""
                   }`}
                   style={{ top: 0 }}
@@ -370,7 +370,7 @@ function Faces() {
                   className="absolute inset-0 opacity-30 mix-blend-screen"
                   style={{
                     backgroundImage:
-                      "linear-gradient(color-mix(in oklab, var(--primary) 35%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in oklab, var(--primary) 35%, transparent) 1px, transparent 1px)",
+                      "linear-gradient(color-mix(in_oklab,_var(--primary)_35%,_transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in_oklab,_var(--primary)_35%,_transparent) 1px, transparent 1px)",
                     backgroundSize: "36px 36px",
                   }}
                 />
@@ -404,7 +404,7 @@ function Faces() {
                   >
                     {/* reticle */}
                     <div
-                      className={`relative h-16 w-16 rounded-full border border-primary/80 shadow-[0_0_20px_color-mix(in oklab, var(--primary) 70%, transparent)] transition-all duration-500 ${
+                      className={`relative h-16 w-16 rounded-full border border-primary/80 shadow-[0_0_20px_color-mix(in_oklab,_var(--primary)_70%,_transparent)] transition-all duration-500 ${
                         reveal ? "scale-100 opacity-100" : "scale-50 opacity-0"
                       }`}
                       style={{ transitionDelay: `${150 + i * 120}ms` }}
@@ -413,7 +413,7 @@ function Faces() {
                       <span className="absolute left-1/2 top-1/2 h-1 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary shadow-[0_0_10px_var(--primary)]" />
                       {/* connector line */}
                       <span
-                        className={`absolute top-1/2 h-px bg-primary/80 shadow-[0_0_8px_color-mix(in oklab, var(--primary) 90%, transparent)] ${
+                        className={`absolute top-1/2 h-px bg-primary/80 shadow-[0_0_8px_color-mix(in_oklab,_var(--primary)_90%,_transparent)] ${
                           t.side === "left" ? "right-full" : "left-full"
                         }`}
                         style={{ width: "44px" }}
@@ -425,7 +425,7 @@ function Faces() {
                         t.side === "left"
                           ? "right-[calc(100%+52px)] text-right"
                           : "left-[calc(100%+52px)] text-left"
-                      } whitespace-nowrap rounded-md border border-primary/60 bg-background/85 px-3 py-2 backdrop-blur-sm shadow-[0_0_18px_color-mix(in oklab, var(--primary) 35%, transparent)] transition-all duration-500 ${
+                      } whitespace-nowrap rounded-md border border-primary/60 bg-background/85 px-3 py-2 backdrop-blur-sm shadow-[0_0_18px_color-mix(in_oklab,_var(--primary)_35%,_transparent)] transition-all duration-500 ${
                         reveal
                           ? "opacity-100 translate-x-0"
                           : `opacity-0 ${t.side === "left" ? "translate-x-2" : "-translate-x-2"}`
@@ -450,7 +450,7 @@ function Faces() {
               <button
                 type="button"
                 onClick={() => setReveal((v) => !v)}
-                className="absolute right-4 top-4 z-10 inline-flex items-center gap-2 rounded-full border border-primary/60 bg-background/70 px-4 py-2 font-display text-xs uppercase tracking-[0.2em] text-primary backdrop-blur-md transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_24px_color-mix(in oklab, var(--primary) 70%, transparent)]"
+                className="absolute right-4 top-4 z-10 inline-flex items-center gap-2 rounded-full border border-primary/60 bg-background/70 px-4 py-2 font-display text-xs uppercase tracking-[0.2em] text-primary backdrop-blur-md transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_24px_color-mix(in_oklab,_var(--primary)_70%,_transparent)]"
                 aria-pressed={reveal}
               >
                 <Sparkles className="h-3.5 w-3.5" />
