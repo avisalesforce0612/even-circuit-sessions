@@ -81,11 +81,13 @@ function Nav() {
     <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <a href="#top" className="flex items-center gap-3">
-          <img
-            src="/logo.png"
-            alt="The Event Circuit"
-            className="h-9 w-auto md:h-10"
-          />
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary p-1.5 md:h-11 md:w-11">
+            <img
+              src="/logo.png"
+              alt="The Event Circuit"
+              className="h-full w-full object-contain"
+            />
+          </div>
           <span className="font-display text-lg font-semibold tracking-tight text-foreground">
             The Event Circuit
           </span>
