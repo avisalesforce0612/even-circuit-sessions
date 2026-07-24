@@ -597,7 +597,7 @@ function RSVP() {
             <SocialRow icon={MessageCircle} label="WhatsApp" value="+91 98••• •••••" href="#" />
             <SocialRow icon={Instagram} label="Instagram" value="@theeventcircuit" href="#" />
             <SocialRow icon={Mail} label="Email" value="hello@eventcircuit.in" href="mailto:hello@eventcircuit.in" />
-            <SocialRow icon={MapPin} label="Location" value="Sector 29, Gurugram" href="#" />
+            <SocialRow icon={MapPin} label="Location" value="Warehouse, Sector 29, Gurugram" href="#" />
           </div>
         </div>
 
