@@ -277,6 +277,98 @@ function About() {
   );
 }
 
+/* ---------------- THE FACES ---------------- */
+function Faces() {
+  const members = [
+    {
+      name: "Puneet",
+      role: "Singer",
+      side: "left",
+    },
+    {
+      name: "Avi",
+      role: "Guitarist · Singer · Songwriter · Composer",
+      side: "left",
+    },
+    {
+      name: "Tushank",
+      role: "Singer · Leader of the group",
+      side: "right",
+      leader: true,
+    },
+    {
+      name: "Gulshan",
+      role: "Guitarist · Singer",
+      side: "right",
+    },
+  ];
+
+  return (
+    <section id="faces" className="relative overflow-hidden border-y border-border bg-card/30">
+      <div className="mx-auto max-w-6xl px-5 py-24 md:py-32">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-primary">The Faces</p>
+            <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
+              Four voices. One circuit.
+            </h2>
+            <p className="mt-5 max-w-md text-lg leading-relaxed text-muted-foreground">
+              These are the people who keep the Saturday circle alive — singers,
+              guitarists, songwriters, and the quiet leader who makes sure the
+              song keeps moving.
+            </p>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-2">
+              {members.map((m) => (
+                <div
+                  key={m.name}
+                  className={`rounded-2xl border border-border bg-background/70 p-5 transition-colors hover:border-primary/50 ${
+                    m.leader ? "ring-1 ring-primary/30" : ""
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[image:var(--gradient-warm)] font-display text-sm font-bold text-primary-foreground">
+                      {m.name[0]}
+                    </span>
+                    <div>
+                      <p className="font-display text-lg font-semibold">
+                        {m.name}
+                        {m.leader && (
+                          <span className="ml-2 align-middle text-xs font-medium text-primary">
+                            (Leader)
+                          </span>
+                        )}
+                      </p>
+                      <p className="text-sm text-muted-foreground">{m.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
+              <img
+                src={facesAsset.url}
+                alt="The Event Circuit members: Puneet, Avi, Tushank, and Gulshan"
+                width={1080}
+                height={1920}
+                className="h-[520px] w-full object-cover object-top md:h-[640px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+            </div>
+            <div className="absolute -bottom-5 -left-5 hidden rotate-[-4deg] rounded-2xl border border-border bg-card px-4 py-3 shadow-[var(--shadow-soft)] md:block">
+              <p className="font-display text-sm">"Tushank keeps the circle in tune."</p>
+              <p className="mt-1 text-xs text-muted-foreground">— The rest of the circuit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------------- HOW IT WORKS ---------------- */
 function HowItWorks() {
   const steps = [
