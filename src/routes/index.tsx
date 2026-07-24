@@ -35,7 +35,9 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "A small, warm music collective jamming every Saturday in Gurugram. Six to seven players, one room, zero pressure. Come play, sing, or just listen.",
+          "A small, warm music collective jamming every Saturday in Gurugram. Great People, Greater Vibes.'
+          'One roof, zero pressure.'
+          'Come play, sing, or just listen.",
       },
       { property: "og:title", content: "The Event Circuit — Saturday Jams in Gurugram" },
       {
@@ -279,7 +281,7 @@ function About() {
 /* ---------------- THE FACES ---------------- */
 function Faces() {
   const members = [
-    { name: "Puneet", role: "Singer", side: "left" as const },
+    { name: "Puneet", role: "Singer", side: "right" as const },
     { name: "Avi", role: "Guitarist · Singer · Songwriter · Composer", side: "left" as const },
     { name: "Tushank", role: "Singer · Leader of the group", side: "right" as const, leader: true },
     { name: "Gulshan", role: "Guitarist · Singer", side: "right" as const },
@@ -298,7 +300,7 @@ function Faces() {
   return (
     <section id="faces" className="relative overflow-hidden border-y border-border bg-card/30">
       <div className="mx-auto max-w-6xl px-5 py-24 md:py-32">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="space-y-12">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-primary">The Faces</p>
             <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
@@ -310,33 +312,6 @@ function Faces() {
               song keeps moving.
             </p>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {members.map((m) => (
-                <div
-                  key={m.name}
-                  className={`rounded-2xl border border-border bg-background/70 p-5 transition-colors hover:border-primary/50 ${
-                    m.leader ? "ring-1 ring-primary/30" : ""
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[image:var(--gradient-warm)] font-display text-sm font-bold text-primary-foreground">
-                      {m.name[0]}
-                    </span>
-                    <div>
-                      <p className="font-display text-lg font-semibold">
-                        {m.name}
-                        {m.leader && (
-                          <span className="ml-2 align-middle text-xs font-medium text-primary">
-                            (Leader)
-                          </span>
-                        )}
-                      </p>
-                      <p className="text-sm text-muted-foreground">{m.role}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="relative">
@@ -344,9 +319,9 @@ function Faces() {
               <img
                 src={facesGroup}
                 alt="The Event Circuit members: Puneet, Avi, Tushank, and Gulshan"
-                width={1080}
-                height={1920}
-                className="h-[520px] w-full object-cover object-top md:h-[640px]"
+                width={1690}
+                height={1024}
+                className="h-auto w-full object-contain"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
 
@@ -395,21 +370,21 @@ function Faces() {
                     key={t.name}
                     className="absolute"
                     style={{
-                      left: `${[21, 36, 55, 74][i]}%`,
-                      top: `${[34, 31, 29, 31][i]}%`,
+                      left: `${[14, 32, 57, 80][i]}%`,
+                      top: `${[34, 56, 56, 31][i]}%`,
                       transform: "translate(-50%, -50%)",
                       transitionDelay: `${150 + i * 120}ms`,
                     }}
                   >
                     {/* reticle */}
                     <div
-                      className={`relative h-16 w-16 rounded-full border border-primary/80 shadow-[0_0_20px_color-mix(in_oklab,_var(--primary)_70%,_transparent)] transition-all duration-500 ${
+                      className={`relative h-3 w-3 rounded-full bg-primary shadow-[0_0_14px_3px_color-mix(in_oklab,_var(--primary)_70%,_transparent)] transition-all duration-500 ${
                         reveal ? "scale-100 opacity-100" : "scale-50 opacity-0"
                       }`}
                       style={{ transitionDelay: `${150 + i * 120}ms` }}
                     >
-                      <span className="absolute inset-2 rounded-full border border-primary/40" />
-                      <span className="absolute left-1/2 top-1/2 h-1 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary shadow-[0_0_10px_var(--primary)]" />
+                      <span className="hidden" />
+                      <span className="hidden" />
                       {/* connector line */}
                       <span
                         className={`absolute top-1/2 h-px bg-primary/80 shadow-[0_0_8px_color-mix(in_oklab,_var(--primary)_90%,_transparent)] ${
