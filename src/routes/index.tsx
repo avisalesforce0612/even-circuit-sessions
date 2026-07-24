@@ -22,6 +22,7 @@ import gal1 from "@/assets/gallery-1.jpg";
 import gal2 from "@/assets/gallery-2.jpg";
 import gal3 from "@/assets/gallery-3.jpg";
 import gal4 from "@/assets/gallery-4.jpg";
+import facesAsset from "@/assets/the-faces.png.asset.json";
 
 const OG_IMAGE =
   "https://id-preview--9b916484-49eb-4de2-88cb-f210e47d0f43.lovable.app/logo.png";
