@@ -67,6 +67,7 @@ function Landing() {
       <Hero />
       <Marquee />
       <About />
+      <Faces />
       <HowItWorks />
       <Sessions />
       <Gallery />
