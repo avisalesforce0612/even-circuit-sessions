@@ -23,23 +23,28 @@ import gal2 from "@/assets/gallery-2.jpg";
 import gal3 from "@/assets/gallery-3.jpg";
 import gal4 from "@/assets/gallery-4.jpg";
 
+const OG_IMAGE =
+  "https://id-preview--9b916484-49eb-4de2-88cb-f210e47d0f43.lovable.app/logo.png";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Even Circuit — Saturday Jams in Gurugram" },
+      { title: "The Event Circuit — Saturday Jams in Gurugram" },
       {
         name: "description",
         content:
           "A small, warm music collective jamming every Saturday in Gurugram. Six to seven players, one room, zero pressure. Come play, sing, or just listen.",
       },
-      { property: "og:title", content: "The Even Circuit — Saturday Jams in Gurugram" },
+      { property: "og:title", content: "The Event Circuit — Saturday Jams in Gurugram" },
       {
         property: "og:description",
         content:
           "Intimate Saturday jam sessions in Gurugram. Guitars, cajons, vocals, keys — and the people who love them. RSVP for the next circle.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
   }),
   component: Landing,
@@ -75,13 +80,12 @@ function Nav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <a href="#top" className="flex items-center gap-2 font-display text-lg font-bold tracking-tight">
-          <span className="grid h-8 w-8 place-items-center rounded-full bg-[image:var(--gradient-warm)] text-primary-foreground shadow-[var(--shadow-glow)]">
-            <Music2 className="h-4 w-4" />
-          </span>
-          <span>
-            The Even <span className="text-primary">Circuit</span>
-          </span>
+        <a href="#top" className="flex items-center">
+          <img
+            src="/logo.png"
+            alt="The Event Circuit"
+            className="h-9 w-auto md:h-10"
+          />
         </a>
         <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
           {nav.map((n) => (
@@ -123,7 +127,7 @@ function Hero() {
             <br />One big sound.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            The Even Circuit is a weekly jam circle in Gurugram — six or seven
+            The Event Circuit is a weekly jam circle in Gurugram — six or seven
             people, warm lights, an acoustic first vibe, and songs that pass
             around the room until nobody wants to leave.
           </p>
@@ -491,8 +495,8 @@ function RSVP() {
 
           <div className="mt-10 space-y-4">
             <SocialRow icon={MessageCircle} label="WhatsApp" value="+91 98••• •••••" href="#" />
-            <SocialRow icon={Instagram} label="Instagram" value="@theevencircuit" href="#" />
-            <SocialRow icon={Mail} label="Email" value="hello@evencircuit.in" href="mailto:hello@evencircuit.in" />
+            <SocialRow icon={Instagram} label="Instagram" value="@theeventcircuit" href="#" />
+            <SocialRow icon={Mail} label="Email" value="hello@eventcircuit.in" href="mailto:hello@eventcircuit.in" />
             <SocialRow icon={MapPin} label="Location" value="Sector 29, Gurugram" href="#" />
           </div>
         </div>
@@ -631,10 +635,10 @@ function Footer() {
           <span className="grid h-7 w-7 place-items-center rounded-full bg-[image:var(--gradient-warm)] text-primary-foreground">
             <Music2 className="h-3.5 w-3.5" />
           </span>
-          The Even Circuit · Gurugram
+          The Event Circuit · Gurugram
         </div>
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} The Even Circuit — Made with warmth, chai and reverb.
+          © {new Date().getFullYear()} The Event Circuit — Made with warmth, chai and reverb.
         </p>
       </div>
     </footer>
