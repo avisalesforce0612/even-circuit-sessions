@@ -280,28 +280,21 @@ function About() {
 /* ---------------- THE FACES ---------------- */
 function Faces() {
   const members = [
-    {
-      name: "Puneet",
-      role: "Singer",
-      side: "left",
-    },
-    {
-      name: "Avi",
-      role: "Guitarist · Singer · Songwriter · Composer",
-      side: "left",
-    },
-    {
-      name: "Tushank",
-      role: "Singer · Leader of the group",
-      side: "right",
-      leader: true,
-    },
-    {
-      name: "Gulshan",
-      role: "Guitarist · Singer",
-      side: "right",
-    },
+    { name: "Puneet", role: "Singer", side: "left" as const },
+    { name: "Avi", role: "Guitarist · Singer · Songwriter · Composer", side: "left" as const },
+    { name: "Tushank", role: "Singer · Leader of the group", side: "right" as const, leader: true },
+    { name: "Gulshan", role: "Guitarist · Singer", side: "right" as const },
   ];
+
+  // Face positions on the portrait (percentages, left→right in the photo).
+  const tags = [
+    { name: "Puneet", role: "Singer", x: 18, y: 34, side: "left" as const },
+    { name: "Avi", role: "Guitarist · Singer · Songwriter · Composer", x: 40, y: 30, side: "left" as const },
+    { name: "Tushank", role: "Singer · Leader", x: 60, y: 32, side: "right" as const, leader: true },
+    { name: "Gulshan", role: "Guitarist · Singer", x: 82, y: 30, side: "right" as const },
+  ];
+
+  const [reveal, setReveal] = useState(false);
 
   return (
     <section id="faces" className="relative overflow-hidden border-y border-border bg-card/30">
@@ -357,6 +350,112 @@ function Faces() {
                 className="h-[520px] w-full object-cover object-top md:h-[640px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+
+              {/* Tron overlay */}
+              <div
+                className={`pointer-events-none absolute inset-0 transition-opacity duration-500 ${
+                  reveal ? "opacity-100" : "opacity-0"
+                }`}
+                aria-hidden={!reveal}
+              >
+                {/* scanline */}
+                <div
+                  className={`absolute inset-x-0 h-[2px] bg-primary/70 shadow-[0_0_18px_2px_hsl(var(--primary)/0.9)] ${
+                    reveal ? "animate-[scan_2.2s_ease-in-out_infinite]" : ""
+                  }`}
+                  style={{ top: 0 }}
+                />
+                {/* grid */}
+                <div
+                  className="absolute inset-0 opacity-30 mix-blend-screen"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(hsl(var(--primary)/0.35) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)/0.35) 1px, transparent 1px)",
+                    backgroundSize: "36px 36px",
+                  }}
+                />
+                {/* corner brackets */}
+                {(["tl", "tr", "bl", "br"] as const).map((c) => (
+                  <span
+                    key={c}
+                    className={`absolute h-6 w-6 border-primary ${
+                      c === "tl"
+                        ? "left-3 top-3 border-l-2 border-t-2"
+                        : c === "tr"
+                          ? "right-3 top-3 border-r-2 border-t-2"
+                          : c === "bl"
+                            ? "bottom-3 left-3 border-b-2 border-l-2"
+                            : "bottom-3 right-3 border-b-2 border-r-2"
+                    }`}
+                  />
+                ))}
+
+                {/* face tags */}
+                {tags.map((t, i) => (
+                  <div
+                    key={t.name}
+                    className="absolute"
+                    style={{
+                      left: `${t.x}%`,
+                      top: `${t.y}%`,
+                      transform: "translate(-50%, -50%)",
+                      transitionDelay: `${150 + i * 120}ms`,
+                    }}
+                  >
+                    {/* reticle */}
+                    <div
+                      className={`relative h-16 w-16 rounded-full border border-primary/80 shadow-[0_0_20px_hsl(var(--primary)/0.7)] transition-all duration-500 ${
+                        reveal ? "scale-100 opacity-100" : "scale-50 opacity-0"
+                      }`}
+                      style={{ transitionDelay: `${150 + i * 120}ms` }}
+                    >
+                      <span className="absolute inset-2 rounded-full border border-primary/40" />
+                      <span className="absolute left-1/2 top-1/2 h-1 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary shadow-[0_0_10px_hsl(var(--primary))]" />
+                      {/* connector line */}
+                      <span
+                        className={`absolute top-1/2 h-px bg-primary/80 shadow-[0_0_8px_hsl(var(--primary)/0.9)] ${
+                          t.side === "left" ? "right-full" : "left-full"
+                        }`}
+                        style={{ width: "44px" }}
+                      />
+                    </div>
+                    {/* label card */}
+                    <div
+                      className={`absolute top-1/2 -translate-y-1/2 ${
+                        t.side === "left"
+                          ? "right-[calc(100%+52px)] text-right"
+                          : "left-[calc(100%+52px)] text-left"
+                      } whitespace-nowrap rounded-md border border-primary/60 bg-background/85 px-3 py-2 backdrop-blur-sm shadow-[0_0_18px_hsl(var(--primary)/0.35)] transition-all duration-500 ${
+                        reveal
+                          ? "opacity-100 translate-x-0"
+                          : `opacity-0 ${t.side === "left" ? "translate-x-2" : "-translate-x-2"}`
+                      }`}
+                      style={{ transitionDelay: `${300 + i * 120}ms` }}
+                    >
+                      <p className="font-display text-sm font-semibold text-primary">
+                        {t.name}
+                        {t.leader && (
+                          <span className="ml-1 text-[10px] uppercase tracking-widest text-accent">
+                            · Lead
+                          </span>
+                        )}
+                      </p>
+                      <p className="text-[11px] text-foreground/80">{t.role}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Who's who button */}
+              <button
+                type="button"
+                onClick={() => setReveal((v) => !v)}
+                className="absolute right-4 top-4 z-10 inline-flex items-center gap-2 rounded-full border border-primary/60 bg-background/70 px-4 py-2 font-display text-xs uppercase tracking-[0.2em] text-primary backdrop-blur-md transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_24px_hsl(var(--primary)/0.7)]"
+                aria-pressed={reveal}
+              >
+                <Sparkles className="h-3.5 w-3.5" />
+                {reveal ? "Hide" : "Who's who?"}
+              </button>
             </div>
             <div className="absolute -bottom-5 -left-5 hidden rotate-[-4deg] rounded-2xl border border-border bg-card px-4 py-3 shadow-[var(--shadow-soft)] md:block">
               <p className="font-display text-sm">"Tushank keeps the circle in tune."</p>
