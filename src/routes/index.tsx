@@ -22,6 +22,8 @@ import gal1 from "@/assets/gallery-1.jpg";
 import gal2 from "@/assets/gallery-2.jpg";
 import gal3 from "@/assets/gallery-3.jpg";
 import gal4 from "@/assets/gallery-4.jpg";
+import facesGroup from "@/assets/faces-group.png";
+import brandLogo from "@/assets/event-circuit-logo.png";
 
 const OG_IMAGE =
   "https://id-preview--9b916484-49eb-4de2-88cb-f210e47d0f43.lovable.app/logo.png";
@@ -83,13 +85,11 @@ function Nav() {
     <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <a href="#top" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary p-1.5 md:h-11 md:w-11">
-            <img
-              src="/logo.png"
-              alt="The Event Circuit"
-              className="h-full w-full object-contain"
-            />
-          </div>
+          <img
+            src={brandLogo}
+            alt="The Event Circuit logo"
+            className="h-10 w-16 rounded-lg object-cover object-center md:h-11 md:w-[4.5rem]"
+          />
           <span className="font-display text-lg font-semibold tracking-tight text-foreground">
             The Event Circuit
           </span>
@@ -342,7 +342,7 @@ function Faces() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
               <img
-                src={gal2}
+                src={facesGroup}
                 alt="The Event Circuit members: Puneet, Avi, Tushank, and Gulshan"
                 width={1080}
                 height={1920}
@@ -395,8 +395,8 @@ function Faces() {
                     key={t.name}
                     className="absolute"
                     style={{
-                      left: `${t.x}%`,
-                      top: `${t.y}%`,
+                      left: `${[21, 36, 55, 74][i]}%`,
+                      top: `${[34, 31, 29, 31][i]}%`,
                       transform: "translate(-50%, -50%)",
                       transitionDelay: `${150 + i * 120}ms`,
                     }}
