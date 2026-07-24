@@ -90,27 +90,32 @@
 }
 
 :root {
-  /* The Even Circuit — warm, urban, music-forward dark theme by default */
+  /* The Event Circuit — brand kit tokens
+   *   Midnight Umber  #140a06  → background
+   *   Circuit Gold    #fe9538  → primary
+   *   Warm Ivory      #fcf3e6  → foreground
+   *   Live Coral      #fe6752  → accent
+   */
   --radius: 0.875rem;
-  --background: oklch(0.16 0.02 40);
-  --foreground: oklch(0.97 0.02 80);
-  --card: oklch(0.20 0.025 40);
-  --card-foreground: oklch(0.97 0.02 80);
-  --popover: oklch(0.20 0.025 40);
-  --popover-foreground: oklch(0.97 0.02 80);
-  --primary: oklch(0.78 0.17 55);
-  --primary-foreground: oklch(0.15 0.02 40);
-  --secondary: oklch(0.26 0.03 40);
-  --secondary-foreground: oklch(0.97 0.02 80);
-  --muted: oklch(0.24 0.02 40);
-  --muted-foreground: oklch(0.72 0.03 70);
-  --accent: oklch(0.72 0.20 30);
-  --accent-foreground: oklch(0.15 0.02 40);
+  --background: oklch(0.108 0.012 45);
+  --foreground: oklch(0.966 0.020 85);
+  --card: oklch(0.165 0.018 45);
+  --card-foreground: oklch(0.966 0.020 85);
+  --popover: oklch(0.165 0.018 45);
+  --popover-foreground: oklch(0.966 0.020 85);
+  --primary: oklch(0.755 0.163 55);
+  --primary-foreground: oklch(0.108 0.012 45);
+  --secondary: oklch(0.22 0.022 45);
+  --secondary-foreground: oklch(0.966 0.020 85);
+  --muted: oklch(0.20 0.018 45);
+  --muted-foreground: oklch(0.74 0.028 75);
+  --accent: oklch(0.703 0.192 30);
+  --accent-foreground: oklch(0.108 0.012 45);
   --destructive: oklch(0.60 0.24 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.30 0.02 40 / 60%);
-  --input: oklch(0.28 0.02 40);
-  --ring: oklch(0.78 0.17 55);
+  --border: oklch(0.30 0.02 45 / 55%);
+  --input: oklch(0.26 0.02 45);
+  --ring: oklch(0.755 0.163 55);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -125,11 +130,12 @@
   --sidebar-border: oklch(0.30 0.02 40 / 60%);
   --sidebar-ring: oklch(0.78 0.17 55);
 
-  --gradient-warm: linear-gradient(135deg, oklch(0.72 0.20 30), oklch(0.82 0.18 65));
-  --gradient-hero: radial-gradient(ellipse at top, oklch(0.35 0.10 45 / 60%), transparent 60%),
-                   radial-gradient(ellipse at bottom right, oklch(0.30 0.12 25 / 55%), transparent 55%);
-  --shadow-glow: 0 20px 60px -20px oklch(0.72 0.20 30 / 55%);
-  --shadow-soft: 0 10px 40px -10px oklch(0 0 0 / 45%);
+  /* Gradients derived from Circuit Gold → Live Coral */
+  --gradient-warm: linear-gradient(135deg, oklch(0.703 0.192 30), oklch(0.755 0.163 55));
+  --gradient-hero: radial-gradient(ellipse at top, oklch(0.755 0.163 55 / 28%), transparent 60%),
+                   radial-gradient(ellipse at bottom right, oklch(0.703 0.192 30 / 32%), transparent 55%);
+  --shadow-glow: 0 20px 60px -20px oklch(0.755 0.163 55 / 55%);
+  --shadow-soft: 0 10px 40px -10px oklch(0 0 0 / 55%);
 }
 
 .dark {

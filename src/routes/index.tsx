@@ -237,7 +237,7 @@ function About() {
         <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
           <p>
             We started as four friends passing a guitar around a rooftop in DLF Phase 3.
-            Two years later, The Even Circuit is a small, deliberately-tiny music
+            Two years later, The Event Circuit is a small, deliberately-tiny music
             community that meets every Saturday to play the songs we love, and a
             few we're still figuring out.
           </p>
