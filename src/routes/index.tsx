@@ -863,12 +863,27 @@ function FAQ() {
 
 /* ---------------- RSVP ---------------- */
 function RSVP() {
-  const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", instrument: "", date: "" });
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    const message = [
+      "New TEC RSVP 🎶",
+      "",
+      `Name: ${form.name}`,
+      `Email or phone: ${form.email}`,
+      `Plays: ${form.instrument || "Not specified"}`,
+      `Event: ${form.date}`,
+      "",
+      "Submitted from the Event Circuit website.",
+    ].join("\n");
+
+    window.open(
+      `https://wa.me/918172852397?text=${encodeURIComponent(message)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+    window.location.assign("https://chat.whatsapp.com/F4C18orjri9F00TKL3Uj13?s=cl&p=a&ilr=0");
   };
 
   return (
@@ -908,21 +923,7 @@ function RSVP() {
         </div>
 
         <div className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] md:p-8">
-          {submitted ? (
-            <div className="grid min-h-[420px] place-items-center text-center">
-              <div>
-                <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[image:var(--gradient-warm)] text-primary-foreground">
-                  <Music2 className="h-6 w-6" />
-                </div>
-                <h3 className="mt-6 font-display text-2xl font-bold">You're on the list.</h3>
-                <p className="mt-3 max-w-sm text-muted-foreground">
-                  We'll ping you on Thursday with the address and a soft
-                  playlist to warm up with. See you Saturday.
-                </p>
-              </div>
-            </div>
-          ) : (
-            <form onSubmit={onSubmit} className="space-y-5">
+          <form onSubmit={onSubmit} className="space-y-5">
               <Field
                 label="Your name"
                 value={form.name}
@@ -950,6 +951,7 @@ function RSVP() {
                 <select
                   value={form.date}
                   onChange={(e) => setForm({ ...form, date: e.target.value })}
+                  required
                   className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-primary/40 transition focus:ring-2"
                 >
                   <option value="">Pick a date</option>
@@ -961,14 +963,13 @@ function RSVP() {
                 type="submit"
                 className="group mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.01]"
               >
-                Reserve my seat
+                Reserve on WhatsApp
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
               <p className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                <Clock className="h-3.5 w-3.5" /> Confirmation by Thursday · Free to cancel
+                <Clock className="h-3.5 w-3.5" /> Send the prepared WhatsApp message, then join the group
               </p>
-            </form>
-          )}
+          </form>
         </div>
       </div>
     </section>
