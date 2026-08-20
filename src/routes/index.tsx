@@ -132,7 +132,7 @@ function Hero() {
         <div className="animate-[fade-up_0.9s_ease-out_both]">
           <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/40 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 text-primary" />
-            Saturday nights · Gurugram · Est. 2023
+            Saturday nights · Gurugram · Est. 2026
           </span>
           <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
             A small room.<br />
