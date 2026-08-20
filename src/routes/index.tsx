@@ -23,6 +23,14 @@ import gal2 from "@/assets/gallery-2.jpg";
 import gal3 from "@/assets/gallery-3.jpg";
 import gal4 from "@/assets/gallery-4.jpg";
 import facesGroup from "@/assets/faces-group.png";
+import anjaliPortrait from "@/assets/anjali-bhardwaj.png";
+import siddharthPortrait from "@/assets/siddharth-singh.png";
+import tushankPortrait from "@/assets/tushank-aggarwal.png";
+import aviralPortrait from "@/assets/aviral-srivastava.png";
+import saloniPortrait from "@/assets/saloni-mishra.png";
+import prateekPortrait from "@/assets/prateek-dipaalpuria.png";
+import puneetPortrait from "@/assets/puneet-kumar.png";
+import joowanleePortrait from "@/assets/joowanlee-ivan.png";
 import brandLogo from "@/assets/event-circuit-logo.png";
 
 const OG_IMAGE =
@@ -54,7 +62,7 @@ export const Route = createFileRoute("/")({
 
 const nav = [
   { href: "#about", label: "About" },
-  { href: "#faces", label: "The Faces" },
+  { href: "#team", label: "Our Team" },
   { href: "#how", label: "How it works" },
   { href: "#sessions", label: "Sessions" },
   { href: "#gallery", label: "Highlights" },
@@ -68,7 +76,7 @@ function Landing() {
       <Hero />
       <Marquee />
       <About />
-      <Faces />
+      <OurTeam />
       <HowItWorks />
       <Sessions />
       <Gallery />
@@ -271,6 +279,207 @@ function About() {
             <p className="mt-4 font-display text-base font-semibold">{label}</p>
           </div>
         ))}
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- OUR TEAM ---------------- */
+function OurTeam() {
+  return (
+    <section id="team" className="relative overflow-hidden border-y border-border bg-card/30">
+      <div className="mx-auto max-w-6xl px-5 py-24 md:py-32">
+        <div className="space-y-12">
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-primary">Our Team</p>
+            <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
+              The people behind the circle.
+            </h2>
+            <p className="mt-5 max-w-lg text-lg leading-relaxed text-muted-foreground">
+              The thoughtful people who make every Event Circuit gathering feel warm,
+              welcoming, and easy to walk into.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+          <article className="order-2 group overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1">
+            <div className="grid sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)]">
+              <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
+                <img
+                  src={anjaliPortrait}
+                  alt="Anjali Bhardwaj"
+                  width={941}
+                  height={1673}
+                  className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent" />
+              </div>
+              <div className="flex flex-col justify-center p-8 md:p-10">
+                <p className="text-xs uppercase tracking-[0.25em] text-primary">Event Management</p>
+                <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">Anjali Bhardwaj</h3>
+                <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <p>A corporate professional and the heart of management at TEC.</p>
+                  <p>Always high on energy, tremendously responsible, and wonderfully friendly.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article className="order-2 group overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1">
+            <div className="grid sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)]">
+              <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
+                <img
+                  src={siddharthPortrait}
+                  alt="Siddharth Singh"
+                  width={1023}
+                  height={1536}
+                  className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent" />
+              </div>
+              <div className="flex flex-col justify-center p-8 md:p-10">
+                <p className="text-xs uppercase tracking-[0.25em] text-primary">Finance Management</p>
+                <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">Siddharth Singh</h3>
+                <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <p>A corporate professional and the soul of management at TEC.</p>
+                  <p>Highly focused, mindful, and wonderfully stubborn.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article className="order-1 group overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1">
+            <div className="grid sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)]">
+              <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
+                <img
+                  src={tushankPortrait}
+                  alt="Tushank Aggarwal"
+                  width={1023}
+                  height={1536}
+                  className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent" />
+              </div>
+              <div className="flex flex-col justify-center p-8 md:p-10">
+                <p className="text-xs uppercase tracking-[0.25em] text-primary">CEO · Vocalist</p>
+                <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">Tushank Aggarwal</h3>
+                <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <p>The visionary who brings every part of TEC together.</p>
+                  <p>He is the steady root of the tree—giving the collective its direction, drive, and sense of belonging.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article className="order-1 group overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1">
+            <div className="grid sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)]">
+              <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
+                <img
+                  src={aviralPortrait}
+                  alt="Aviral Srivastava"
+                  width={1023}
+                  height={1536}
+                  className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent" />
+              </div>
+              <div className="flex flex-col justify-center p-8 md:p-10">
+                <p className="text-xs uppercase tracking-[0.25em] text-primary">CTO · Head of Artist Management · Singer · Lyricist · Composer · Guitarist</p>
+                <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">Aviral Srivastava</h3>
+                <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <p>An all-rounder software engineer, composer, songwriter, and guitarist.</p>
+                  <p>He carries TEC’s artist-management operation with care and craft. Visit him on Spotify someday.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article className="order-3 group overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1">
+            <div className="grid sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)]">
+              <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
+                <img
+                  src={saloniPortrait}
+                  alt="Saloni Mishra"
+                  width={1023}
+                  height={1536}
+                  className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent" />
+              </div>
+              <div className="flex flex-col justify-center p-8 md:p-10">
+                <p className="text-xs uppercase tracking-[0.25em] text-primary">Vocalist</p>
+                <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">Saloni Mishra</h3>
+                <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <p>A soon-to-be doctor by profession and a singer by passion.</p>
+                  <p>She has been taking the stage since she was six, bringing a sweet, soulful voice and undeniable main-character energy.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article className="order-3 group overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1">
+            <div className="grid sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)]">
+              <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
+                <img
+                  src={prateekPortrait}
+                  alt="Prateek Dipaalpuria"
+                  width={1023}
+                  height={1536}
+                  className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent" />
+              </div>
+              <div className="flex flex-col justify-center p-8 md:p-10">
+                <p className="text-xs uppercase tracking-[0.25em] text-primary">Vocalist · Lyricist · Composer</p>
+                <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">Prateek Dipaalpuria</h3>
+                <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <p>An independent Indian singer, lyricist, and composer from Sonipat, Haryana, now creating from Delhi.</p>
+                  <p>He writes, composes, and sings across pop, classical, Sufi, romantic, and devotional music.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article className="order-3 group overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1">
+            <div className="grid sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)]">
+              <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
+                <img
+                  src={puneetPortrait}
+                  alt="Puneet Kumar"
+                  width={941}
+                  height={1673}
+                  className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent" />
+              </div>
+              <div className="flex flex-col justify-center p-8 md:p-10">
+                <p className="text-xs uppercase tracking-[0.25em] text-primary">Vocalist</p>
+                <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">Puneet Kumar</h3>
+                <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <p>A corporate professional and an exceptional singer who holds every note with ease.</p>
+                  <p>His soothing voice brings calm, warmth, and a beautiful depth to every performance.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article className="order-3 group overflow-hidden rounded-3xl border border-border bg-background shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1">
+            <div className="grid sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)]">
+              <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
+                <img
+                  src={joowanleePortrait}
+                  alt="Joowanlee Ivan"
+                  width={1023}
+                  height={1536}
+                  className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent" />
+              </div>
+              <div className="flex flex-col justify-center p-8 md:p-10">
+                <p className="text-xs uppercase tracking-[0.25em] text-primary">Vocalist · Guitarist · Composer</p>
+                <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">Joowanlee Ivan</h3>
+                <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+                  <p>A vocalist, guitarist, and composer with an enduring love for Western music.</p>
+                  <p>A true mentor, he has devoted more than two decades to his craft and to guiding fellow artists.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
       </div>
     </section>
   );
