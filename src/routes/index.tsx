@@ -709,10 +709,22 @@ function HowItWorks() {
 /* ---------------- SESSIONS ---------------- */
 function Sessions() {
   const sessions = [
-    { date: "Sat, Aug 01", theme: "Bollywood Unplugged", spots: "3 spots left", tag: "Open" },
-    { date: "Sat, Aug 08", theme: "Indie Folk Circle", spots: "5 spots left", tag: "Open" },
-    { date: "Sat, Aug 15", theme: "Originals Night", spots: "Waitlist only", tag: "Full" },
-    { date: "Sat, Aug 22", theme: "90s Rock Revival", spots: "6 spots left", tag: "Open" },
+    {
+      date: "Fri, Aug 22",
+      theme: "NightOwl Market",
+      venue: "Throttle Shrottle Motor Cafe, Faridabad Road",
+      spots: "Free entry",
+      cta: "Details",
+      href: "#rsvp",
+    },
+    {
+      date: "Sat, Aug 30",
+      theme: "Raagras 2026",
+      venue: "Tickets live now · 7–10 PM",
+      spots: "Early bird open",
+      cta: "Book tickets",
+      href: "https://www.paxmeet.com/events/cabf7071-f2ed-4167-a129-3ba12f6b7536",
+    },
   ];
   return (
     <section id="sessions" className="mx-auto max-w-6xl px-5 py-24 md:py-32">
@@ -733,7 +745,7 @@ function Sessions() {
 
       <ul className="mt-12 divide-y divide-border overflow-hidden rounded-3xl border border-border bg-card/40">
         {sessions.map((s) => {
-          const full = s.tag === "Full";
+          const external = s.href.startsWith("http");
           return (
             <li
               key={s.date}
@@ -743,19 +755,18 @@ function Sessions() {
                 <Calendar className="h-4 w-4 shrink-0 text-primary" />
                 <span className="truncate font-mono text-sm text-muted-foreground">{s.date}</span>
               </div>
-              <p className="col-span-2 min-w-0 truncate font-display text-lg font-semibold md:col-span-1">
-                {s.theme}
-              </p>
+              <div className="col-span-2 min-w-0 md:col-span-1">
+                <p className="truncate font-display text-lg font-semibold">{s.theme}</p>
+                <p className="truncate text-sm text-muted-foreground">{s.venue}</p>
+              </div>
               <span className="hidden text-sm text-muted-foreground md:inline">{s.spots}</span>
               <a
-                href="#rsvp"
-                className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-semibold transition-colors ${
-                  full
-                    ? "border border-border text-muted-foreground"
-                    : "bg-primary text-primary-foreground hover:opacity-90"
-                }`}
+                href={s.href}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
+                className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
-                {full ? "Waitlist" : "RSVP"} <ArrowRight className="h-3.5 w-3.5" />
+                {s.cta} <ArrowRight className="h-3.5 w-3.5" />
               </a>
             </li>
           );
