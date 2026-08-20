@@ -710,17 +710,18 @@ function HowItWorks() {
 function Sessions() {
   const sessions = [
     {
-      date: "Fri, Aug 22",
+      date: "Sat, Aug 22",
       theme: "NightOwl Market",
       venue: "Throttle Shrottle Motor Cafe, Faridabad Road",
-      spots: "Free entry",
-      cta: "Details",
-      href: "#rsvp",
+      Announcement: "Free entry· 9-11 PM",
+      cta: "Get Details",
+      href: "#https://chat.whatsapp.com/F4C18orjri9F00TKL3Uj13?s=cl&p=a&ilr=0",
     },
     {
-      date: "Sat, Aug 30",
+      date: "Sun, Aug 30",
       theme: "Raagras 2026",
-      venue: "Tickets live now · 7–10 PM",
+      venue: "Avenue 56, Sector 56, Gurugram",
+      Announcement: "Tickets live now · 7–10 PM",
       spots: "Early bird open",
       cta: "Book tickets",
       href: "https://www.paxmeet.com/events/cabf7071-f2ed-4167-a129-3ba12f6b7536",
@@ -732,7 +733,7 @@ function Sessions() {
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-primary">Upcoming sessions</p>
           <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
-            Pick a Saturday.
+            Pick an event.
           </h2>
         </div>
         <a
