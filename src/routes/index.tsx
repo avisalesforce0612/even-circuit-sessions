@@ -715,7 +715,7 @@ function Sessions() {
       venue: "Throttle Shrottle Motor Cafe, Faridabad Road",
       Announcement: "Free entry· 9-11 PM",
       cta: "Get Details",
-      href: "#https://chat.whatsapp.com/F4C18orjri9F00TKL3Uj13?s=cl&p=a&ilr=0",
+      href: "https://chat.whatsapp.com/F4C18orjri9F00TKL3Uj13?s=cl&p=a&ilr=0",
     },
     {
       date: "Sun, Aug 30",
