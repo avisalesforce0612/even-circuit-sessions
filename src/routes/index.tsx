@@ -889,7 +889,18 @@ function RSVP() {
           </p>
 
           <div className="mt-10 space-y-4">
-            <SocialRow icon={MessageCircle} label="WhatsApp" value="+91 98••• •••••" href="#" />
+            <SocialRow
+              icon={MessageCircle}
+              label="WhatsApp (enquiries only)"
+              value="+91 81728 52397"
+              href="https://wa.me/918172852397"
+            />
+            <SocialRow
+              icon={MessageCircle}
+              label="WhatsApp (enquiries only)"
+              value="+91 98941 2758"
+              href="https://wa.me/91989412758"
+            />
             <SocialRow icon={Instagram} label="Instagram" value="@theeventcircuit" href="#" />
             <SocialRow icon={Mail} label="Email" value="hello@eventcircuit.in" href="mailto:hello@eventcircuit.in" />
             <SocialRow icon={MapPin} label="Location" value="Warehouse, Sector 29, Gurugram" href="#" />
@@ -942,9 +953,8 @@ function RSVP() {
                   className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-primary/40 transition focus:ring-2"
                 >
                   <option value="">Pick a date</option>
-                  <option>Sat, Aug 01 — Bollywood Unplugged</option>
-                  <option>Sat, Aug 08 — Indie Folk Circle</option>
-                  <option>Sat, Aug 22 — 90s Rock Revival</option>
+                  <option>Fri, Aug 22 — NightOwl Market (Free)</option>
+                  <option>Sat, Aug 30 — Raagras 2026</option>
                 </select>
               </div>
               <button
