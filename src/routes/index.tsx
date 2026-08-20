@@ -956,8 +956,8 @@ function RSVP() {
                   className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-primary/40 transition focus:ring-2"
                 >
                   <option value="">Pick a date</option>
-                  <option>Fri, Aug 22 — NightOwl Market (Free)</option>
-                  <option>Sat, Aug 30 — Raagras 2026</option>
+                  <option>Sat, Aug 22 — NightOwl Market (Free)</option>
+                  <option>Sun, Aug 30 — Raagras 2026</option>
                 </select>
               </div>
               <button
