@@ -898,10 +898,10 @@ function RSVP() {
             <SocialRow
               icon={MessageCircle}
               label="WhatsApp (enquiries only)"
-              value="+91 98941 2758"
-              href="https://wa.me/91989412758"
+              value="+91 98994 12758"
+              href="https://wa.me/919899412758"
             />
-            <SocialRow icon={Instagram} label="Instagram" value="@theeventcircuit" href="#" />
+            <SocialRow icon={Instagram} label="Instagram" value="@theeventcircuit" href="https://www.instagram.com/theeventcircuit?igsh=ZXViNHBmcDdxanFp" />
             <SocialRow icon={Mail} label="Email" value="hello@eventcircuit.in" href="mailto:hello@eventcircuit.in" />
             <SocialRow icon={MapPin} label="Location" value="Warehouse, Sector 29, Gurugram" href="#" />
           </div>
