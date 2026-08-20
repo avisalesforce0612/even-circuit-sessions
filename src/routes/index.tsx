@@ -319,7 +319,7 @@ function OurTeam() {
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent" />
               </div>
               <div className="flex flex-col justify-center p-8 md:p-10">
-                <p className="text-xs uppercase tracking-[0.25em] text-primary">Event Management</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-primary">Event Manager</p>
                 <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">Anjali Bhardwaj</h3>
                 <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
                   <p>A corporate professional and the heart of management at TEC.</p>
@@ -341,7 +341,7 @@ function OurTeam() {
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent" />
               </div>
               <div className="flex flex-col justify-center p-8 md:p-10">
-                <p className="text-xs uppercase tracking-[0.25em] text-primary">Finance Management</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-primary">Finance Manager</p>
                 <h3 className="mt-4 font-display text-3xl font-bold md:text-4xl">Siddharth Singh</h3>
                 <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
                   <p>A corporate professional and the soul of management at TEC.</p>
