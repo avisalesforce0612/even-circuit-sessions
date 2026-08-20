@@ -17,7 +17,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-import heroImg from "@/assets/hero-jam.jpg";
+import bannerAsset from "@/assets/raag-ras-banner.png.asset.json";
 import gal1 from "@/assets/gallery-1.jpg";
 import gal2 from "@/assets/gallery-2.jpg";
 import gal3 from "@/assets/gallery-3.jpg";
@@ -178,21 +178,25 @@ function Hero() {
         <div className="relative">
           <div className="relative overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-soft)]">
             <img
-              src={heroImg}
-              alt="A circle of musicians jamming under warm string lights"
-              width={1920}
-              height={1280}
-              className="h-[520px] w-full object-cover"
+              src={bannerAsset.url}
+              alt="Raag Ras by The Event Circuit — tickets live now, 30 August, 7 to 10 PM"
+              className="w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
-            <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background/85 to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5 flex flex-wrap items-end justify-between gap-3">
               <div className="rounded-2xl border border-border/60 bg-background/70 px-4 py-3 backdrop-blur">
-                <p className="text-[11px] uppercase tracking-widest text-muted-foreground">Next circle</p>
-                <p className="mt-0.5 font-display text-lg font-semibold">Sat · 8:00 PM</p>
+                <p className="text-[11px] uppercase tracking-widest text-muted-foreground">Next show</p>
+                <p className="mt-0.5 font-display text-lg font-semibold">30 Aug · 7–10 PM</p>
               </div>
-              <span className="flex items-center gap-2 rounded-full bg-primary/90 px-3 py-1.5 text-xs font-semibold text-primary-foreground animate-[pulse-glow_3s_ease-in-out_infinite]">
-                <span className="h-1.5 w-1.5 rounded-full bg-primary-foreground" /> 3 spots left
-              </span>
+              <a
+                href="https://www.paxmeet.com/events/cabf7071-f2ed-4167-a129-3ba12f6b7536"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.03] animate-[pulse-glow_3s_ease-in-out_infinite]"
+              >
+                Book your early bird slot now
+                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
           </div>
           <div className="absolute -bottom-6 -left-6 hidden rotate-[-6deg] rounded-2xl border border-border bg-card px-4 py-3 shadow-[var(--shadow-soft)] md:block">
