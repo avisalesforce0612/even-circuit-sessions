@@ -17,7 +17,6 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-import heroImg from "@/assets/hero-jam.jpg";
 import bannerAsset from "@/assets/raag-ras-banner.png.asset.json";
 import gal1 from "@/assets/gallery-1.jpg";
 import gal2 from "@/assets/gallery-2.jpg";
