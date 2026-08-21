@@ -33,8 +33,8 @@ import puneetPortrait from "@/assets/puneet-kumar.png";
 import joowanleePortrait from "@/assets/joowanlee-ivan.png";
 import brandLogo from "@/assets/event-circuit-logo.png";
 
-const OG_IMAGE =
-  "https://id-preview--9b916484-49eb-4de2-88cb-f210e47d0f43.lovable.app/logo.png";
+const SITE_URL = "https://theeventcircuit.lovable.app";
+const OG_IMAGE = `${SITE_URL}/logo.png`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,9 +52,93 @@ export const Route = createFileRoute("/")({
           "Intimate Saturday jam sessions in Gurugram. Guitars, cajons, vocals, keys — and the people who love them. RSVP for the next circle.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${SITE_URL}/` },
       { property: "og:image", content: OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: OG_IMAGE },
+    ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "MusicGroup",
+              "@id": `${SITE_URL}/#organization`,
+              name: "The Event Circuit",
+              url: `${SITE_URL}/`,
+              logo: OG_IMAGE,
+              image: OG_IMAGE,
+              description:
+                "A music collective hosting intimate Saturday jam sessions in Gurugram.",
+              email: "theventcircuit@gmail.com",
+              sameAs: ["https://www.instagram.com/theeventcircuit"],
+              areaServed: { "@type": "City", name: "Gurugram" },
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${SITE_URL}/#website`,
+              url: `${SITE_URL}/`,
+              name: "The Event Circuit",
+              publisher: { "@id": `${SITE_URL}/#organization` },
+            },
+            {
+              "@type": "Event",
+              name: "NightOwl Market with The Event Circuit",
+              startDate: "2026-08-22T19:00+05:30",
+              eventStatus: "https://schema.org/EventScheduled",
+              eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+              image: OG_IMAGE,
+              location: {
+                "@type": "Place",
+                name: "Throttle Shrottle Motor Cafe",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "Faridabad Road",
+                  addressLocality: "Gurugram",
+                  addressCountry: "IN",
+                },
+              },
+              performer: { "@id": `${SITE_URL}/#organization` },
+              organizer: { "@id": `${SITE_URL}/#organization` },
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "INR",
+                availability: "https://schema.org/InStock",
+                url: `${SITE_URL}/#sessions`,
+              },
+            },
+            {
+              "@type": "Event",
+              name: "Raag Ras 2026 by The Event Circuit",
+              startDate: "2026-08-30T19:00+05:30",
+              endDate: "2026-08-30T22:00+05:30",
+              eventStatus: "https://schema.org/EventScheduled",
+              eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+              image: OG_IMAGE,
+              location: {
+                "@type": "Place",
+                name: "Gurugram",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Gurugram",
+                  addressCountry: "IN",
+                },
+              },
+              performer: { "@id": `${SITE_URL}/#organization` },
+              organizer: { "@id": `${SITE_URL}/#organization` },
+              offers: {
+                "@type": "Offer",
+                availability: "https://schema.org/InStock",
+                url: "https://www.paxmeet.com/events/cabf7071-f2ed-4167-a129-3ba12f6b7536",
+              },
+            },
+          ],
+        }),
+      },
     ],
   }),
   component: Landing,
@@ -95,7 +179,7 @@ function Nav() {
         <a href="#top" className="flex items-center gap-3">
           <img
             src={brandLogo}
-            alt="The Event Circuit logo"
+            alt="The Event Circuit logo — Saturday music jams in Gurugram"
             className="h-10 w-16 rounded-lg object-cover object-center md:h-11 md:w-[4.5rem]"
           />
           <span className="font-display text-lg font-semibold tracking-tight text-foreground">
@@ -311,7 +395,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={anjaliPortrait}
-                  alt="Anjali Bhardwaj"
+                  alt="Anjali Bhardwaj, Event Manager at The Event Circuit"
                   width={941}
                   height={1673}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -333,7 +417,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={siddharthPortrait}
-                  alt="Siddharth Singh"
+                  alt="Siddharth Singh, Finance Manager at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -355,7 +439,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={tushankPortrait}
-                  alt="Tushank Aggarwal"
+                  alt="Tushank Aggarwal, CEO and vocalist at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -377,7 +461,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={aviralPortrait}
-                  alt="Aviral Srivastava"
+                  alt="Aviral Srivastava, CTO, singer and guitarist at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -399,7 +483,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={saloniPortrait}
-                  alt="Saloni Mishra"
+                  alt="Saloni Mishra, vocalist at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -421,7 +505,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={prateekPortrait}
-                  alt="Prateek Dipaalpuria"
+                  alt="Prateek Dipaalpuria, vocalist, lyricist and composer at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -443,7 +527,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={puneetPortrait}
-                  alt="Puneet Kumar"
+                  alt="Puneet Kumar, vocalist at The Event Circuit"
                   width={941}
                   height={1673}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -465,7 +549,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={joowanleePortrait}
-                  alt="Joowanlee Ivan"
+                  alt="Joowanlee Ivan, vocalist, guitarist and composer at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"

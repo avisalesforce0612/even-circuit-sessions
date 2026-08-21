@@ -1,0 +1,13 @@
+# The Event Circuit
+
+> A music collective in Gurugram hosting intimate Saturday jam sessions and live shows.
+
+The Event Circuit brings together singers, guitarists, and listeners for small-room jams and ticketed shows in Gurugram. RSVP is open to anyone; enquiries go over WhatsApp or email (theventcircuit@gmail.com).
+
+## Pages
+
+- [Home](/): Hero, about, team, how it works, upcoming sessions, highlights, FAQ, and the RSVP form.
+
+## Optional
+
+- [Instagram](https://www.instagram.com/theeventcircuit): Photos and clips from past sessions.
