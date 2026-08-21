@@ -95,7 +95,7 @@ function Nav() {
         <a href="#top" className="flex items-center gap-3">
           <img
             src={brandLogo}
-            alt="The Event Circuit logo"
+            alt="The Event Circuit logo — Saturday music jams in Gurugram"
             className="h-10 w-16 rounded-lg object-cover object-center md:h-11 md:w-[4.5rem]"
           />
           <span className="font-display text-lg font-semibold tracking-tight text-foreground">
@@ -311,7 +311,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={anjaliPortrait}
-                  alt="Anjali Bhardwaj"
+                  alt="Anjali Bhardwaj, Event Manager at The Event Circuit"
                   width={941}
                   height={1673}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -333,7 +333,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={siddharthPortrait}
-                  alt="Siddharth Singh"
+                  alt="Siddharth Singh, Finance Manager at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -355,7 +355,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={tushankPortrait}
-                  alt="Tushank Aggarwal"
+                  alt="Tushank Aggarwal, CEO and vocalist at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -377,7 +377,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={aviralPortrait}
-                  alt="Aviral Srivastava"
+                  alt="Aviral Srivastava, CTO, singer and guitarist at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -399,7 +399,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={saloniPortrait}
-                  alt="Saloni Mishra"
+                  alt="Saloni Mishra, vocalist at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -421,7 +421,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={prateekPortrait}
-                  alt="Prateek Dipaalpuria"
+                  alt="Prateek Dipaalpuria, vocalist, lyricist and composer at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -443,7 +443,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={puneetPortrait}
-                  alt="Puneet Kumar"
+                  alt="Puneet Kumar, vocalist at The Event Circuit"
                   width={941}
                   height={1673}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
@@ -465,7 +465,7 @@ function OurTeam() {
               <div className="relative min-h-[360px] overflow-hidden sm:min-h-full">
                 <img
                   src={joowanleePortrait}
-                  alt="Joowanlee Ivan"
+                  alt="Joowanlee Ivan, vocalist, guitarist and composer at The Event Circuit"
                   width={1023}
                   height={1536}
                   className="absolute inset-0 h-full w-full object-cover object-[center_28%] transition-transform duration-700 group-hover:scale-105"
