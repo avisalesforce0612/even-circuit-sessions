@@ -219,11 +219,16 @@ function Hero() {
             Saturday nights · Gurugram · Est. 2026
           </span>
           <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl">
-            A small room.<br />
+            Us. <br />
             <span className="bg-[image:var(--gradient-warm)] bg-clip-text text-transparent">
-              Six players.
+              You & an
             </span>
-            <br />One big sound.
+            <br />
+            Unforgettable <br />
+            experience.
+            <div className="mt-4 text-2xl font-medium tracking-normal text-muted-foreground/80 md:text-3xl">
+              Music Jamming like never before, now in gurugram!
+            </div>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
             The Event Circuit is a weekly jam circle in Gurugram — six or seven
